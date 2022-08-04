@@ -1,0 +1,22 @@
+<mat-toolbar>
+    <span>My Application</span>
+</mat-toolbar>
+
+
+<mat-form-field apariencia = "fill">
+    <mat-label>Select</mat-label>
+    <mat-select (selectionChange)="onSelect($event)">
+        <mat-option *ngFor="let item of user$" [value]="item.id">{{item.username}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field apariencia = "fill">
+    <mat-label>Select</mat-label>
+    <mat-select >
+        <mat-option *ngFor="let item of user$" [value]="item.id">{{item.username}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+
+
+<div>{{user$ | json}}</div>
